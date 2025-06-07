@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to MyENERGY</title>
+    <style>
+        /* General body styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #dff0d8, #4CAF50);
+            color: #333;
+            text-align: center;
+
+            /* Use Flexbox to center the container */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Container for the main content */
+        .container {
+        padding: 50px;
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        display: inline-block;
+        text-align: center;
+        }
+
+        /* Styling for the title */
+        h1 {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        /* Highlighted part of the title */
+        .highlight {
+            color: #4CAF50; /* Green color for emphasis */
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button styles */
+        .btn {
+            display: inline-block;
+            background-color: #4CAF50; /* Green */
+            color: #fff; /* White text */
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: bold;
+            padding: 12px 20px;
+            margin: 15px;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Button hover effects */
+        .btn:hover {
+            background-color: #45a049; /* Slightly darker green */
+            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to <span class="highlight">MyENERGY</span></h1>
+        <a href="loginpage.html" class="btn">Log In</a>
+        <a href="registerpage.html" class="btn">Register</a>
+    </div>
+
+</body>
+</html>

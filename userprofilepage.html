@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyENERGY - Your Profile</title>
+    <link rel="stylesheet" href="userprofilestyles.css">
+</head>
+<body>
+    <div class="profile-container">
+        <header>
+            <h1>MyENERGY</h1>
+            <h2>Your Profile</h2>
+        </header>
+        <main>
+            <div class="profile-info">
+                <!-- Profile Picture -->
+                <img src="/png-transparent-computer-icons-user-profile-circle-abstract-miscellaneous-rim-account.png" alt="Profile Picture" class="profile-pic">
+
+                <!-- User Details -->
+                <div class="details">
+                    <p><strong>Full Name:</strong><span id="name-view">Loading...</span></p>
+                    <p><strong>Phone Number:</strong> <span id="phone-view">Loading...</span></p>
+                    <p><strong>Home Address:</strong> <span id="address-view">Loading...</span></p>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="actions">
+                <a href="editprofile.html"><button class="action-button edit-button">Edit</button></a>
+                <button class="action-button settings-button">Settings and Preferences</button>
+                <button class="action-button logout-button" id="logout-button">Log Out</button>
+            </div>
+        </main>
+    </div>
+
+    <script>
+
+        // Load saved profile data from localStorage when the page loads
+        document.addEventListener("DOMContentLoaded", () => {
+            const storedProfile = JSON.parse(localStorage.getItem("profileData"));
+
+            if (storedProfile) {
+                // Populate the profile page fields with saved data
+                document.getElementById("name-view").textContent = storedProfile.name;
+                document.getElementById("phone-view").textContent = storedProfile.phone;
+                document.getElementById("address-view").textContent = storedProfile.address;
+            } else {
+                // If no data is found, display placeholder text
+                document.getElementById("name-view").textContent = "No data available";
+                document.getElementById("phone-view").textContent = "No data available";
+                document.getElementById("address-view").textContent = "No data available";
+            }
+        });
+
+
+        // Add a click event listener to the Log Out button
+        document.getElementById("logout-button").addEventListener("click", () => {
+            // Clear user session (remove logged-in user data from localStorage)
+            localStorage.removeItem("loggedInUser");
+            
+            // Redirect to the login page
+            window.location.href = "homepage.html"; // Replace with the correct path to your login page
+        });
+    </script>
+    
+
+</body>
+</html>

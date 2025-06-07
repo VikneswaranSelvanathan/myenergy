@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyENERGY Dashboard</title>
+    <link rel="stylesheet" href="dashboardstyles.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <header>
+            <h1>MyENERGY</h1>
+            <p id="welcome-message">Welcome, ###</p>
+        </header>
+        <section class="energy-info">
+            <h2>Energy Data:</h2>
+            <p>Running Time: <span id="runningTime">Loading...</span></p>
+            <p>Power: <span id="power">Calculating...</span> Wh</p>
+        </section>
+        <section class="dashboard-sections">
+            <div class="section-card">
+                <a href="resultspage.html"><img src="/3326994-200.png" alt="Results Icon"></a>
+                <p>Results</p>
+            </div>
+            
+            <div class="section-card">
+                <a href="tipspage.html"><img src="/png-transparent-edison-bulb-illustration-incandescent-light-bulb-computer-icons-tips-angle-text-light-thumbnail.png" alt="Tips Icon"></a>
+                <p>Tips</p>
+            </div>
+        </section>
+        
+        <!-- Profile Picture -->
+        <a href="userprofilepage.html"><img src="/png-transparent-computer-icons-user-profile-circle-abstract-miscellaneous-rim-account.png" alt="Profile Picture" class="profile-pic"></a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Retrieve the username from localStorage
+            const username = localStorage.getItem("loggedInUser");
+            
+            // Check if username exists
+            if (username) {
+                // Update the welcome message
+                const welcomeMessageElement = document.getElementById("welcome-message");
+                welcomeMessageElement.textContent = `Welcome, ${username}`;
+            } else {
+                // If no username is found, redirect to login page
+                alert("You are not logged in!");
+                window.location.href = "loginpage.html";
+            }
+        });
+    </script>
+    <script src="dashboardapi.js" defer></script>
+</body>
+</html>

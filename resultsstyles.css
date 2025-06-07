@@ -1,0 +1,118 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff0d8, #4CAF50); /* Green gradient background */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Results Container */
+.results-container {
+    width: 800px;
+    background: #fff; /* White background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 30px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-size: 36px;
+    color: #4CAF50; /* Green title */
+    margin: 0;
+}
+
+header h2 {
+    font-size: 24px;
+    color: #666; /* Subtle gray */
+    margin: 10px 0 20px;
+}
+
+/* Data Section */
+.data-section {
+    margin: 20px 0;
+    background: #f9f9f9; /* Soft gray background for clarity */
+    border: 1px solid #dff0d8; /* Light green border */
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.data-section h3 {
+    font-size: 18px;
+    color: #4CAF50; /* Green heading */
+    margin: 0;
+}
+
+.data-section p {
+    font-size: 20px;
+    color: #333; /* Standard gray text */
+    margin: 10px 0 0;
+}
+
+/* Content Area */
+.content-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Left: Data Graph */
+.data-graph img,
+.circular-diagram img {
+    width: 300px; /* Equal width for both images */
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add depth */
+}
+
+/* Right: Circular Diagram */
+.circular-diagram {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Generate Report Section */
+.generate-report {
+    margin-top: 30px;
+}
+
+.generate-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.generate-button:hover {
+    background-color: #45a049; /* Slightly darker green */
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+.graph-section {
+    display: flex;
+    justify-content: center; /* Centers the graph */
+    align-items: center;
+}
+
+.graph-section canvas {
+    width: 100%; 
+    max-width: 600px; /* Set a fixed width */
+    height: 300px; /* Set a fixed height */
+    border: 2px solid #333;
+    border-radius: 8px;
+}

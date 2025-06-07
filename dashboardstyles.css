@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff0d8, #4CAF50); /* Green gradient background */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    height: 100vh;
+    color: #333;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard-container {
+    position: relative; /* Allows precise positioning for child elements */
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for a modern look */
+}
+
+header h1 {
+    font-size: 36px;
+    color: #4CAF50; /* Green title */
+    margin-bottom: 10px;
+}
+
+header p {
+    font-weight: bold;
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+/* Energy Info Section */
+.energy-info {
+    margin-top: 20px;
+    border: 1px solid #dff0d8;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #f9f9f9; /* Soft white for contrast */
+}
+
+.energy-info h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #4CAF50; /* Green headings */
+}
+
+.energy-info p {
+    font-size: 18px;
+    margin: 5px 0;
+    font-weight: bold;
+}
+
+.energy-info .note {
+    font-size: 16px;
+    color: red; /* Noticeable alert color */
+}
+
+/* Dashboard Sections */
+.dashboard-sections {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.section-card {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9; /* Light background for cards */
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover effect */
+}
+
+.section-card img {
+    width: 60px;
+    height: 60px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+.section-card p {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.section-card:hover {
+    transform: scale(1.05); /* Slightly enlarges on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhances hover effect */
+}
+
+/* Appliances Section */
+.appliances {
+    margin-top: 30px;
+}
+
+.appliances h2 {
+    font-size: 22px;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+.appliances-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.appliances-icons img {
+    width: 60px;
+    height: 60px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease; /* Hover effect */
+}
+
+.appliances-icons img:hover {
+    transform: scale(1.1);
+}
+
+/* Connect Button */
+.connect-button {
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px; /* Rounded button */
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.connect-button:hover {
+    background-color: #45a049; /* Slightly darker green on hover */
+    transform: scale(1.05); /* Slightly enlarges on hover */
+}
+
+/* Profile Picture */
+.profile-pic {
+    width: 80px; /* Profile picture size */
+    height: 80px;
+    border-radius: 50%; /* Circular profile picture */
+    position: absolute; /* Positioned relative to the container */
+    top: 20px; /* Slightly below the top of the container */
+    right: 20px; /* Positioned to the right */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    border: 2px solid #4CAF50; /* Green border for consistency */
+    background-color: white; /* White background */
+}

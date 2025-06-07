@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyENERGY Login</title>
+    <link rel="stylesheet" href="userloginstyles.css">
+</head>
+<body>
+    
+    <div class="login-container">
+        <h1>MyENERGY</h1>
+        <form id="loginForm"> <!-- Added an ID to the form for clear identification -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <a href="#" class="forgot-password">I forgot my password</a>
+            
+            <button type="submit" class="login-button">LOGIN</button>
+        </form>
+    </div>
+
+    <script>
+        // Improved login functionality with added validations
+        document.getElementById("loginForm").addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent default form submission
+
+            // Retrieve entered username and password
+            const username = document.getElementById("username").value.trim().toLowerCase(); // Trim and standardize case
+            const password = document.getElementById("password").value.trim();
+
+            if (!username || !password) {
+                alert("Both username and password are required.");
+                return;
+            }
+
+            // Fetch user data from localStorage
+            const userData = localStorage.getItem(username) 
+                ? JSON.parse(localStorage.getItem(username)) 
+                : null;
+
+            if (userData) {
+                // Validate password
+                if (userData.password === password) {
+                    alert("Login successful! Welcome back.");
+                    // Save the username to localStorage
+                    localStorage.setItem("loggedInUser", username);
+                    // Redirect to the dashboard page
+                    window.location.href = "dashboard.html";
+                } else {
+                    alert("Invalid password. Please try again.");
+                }
+            } else {
+                alert("User not found. Please register first.");
+            }
+        });
+    </script>
+
+</body>
+</html>

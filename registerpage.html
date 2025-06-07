@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyENERGY Registration</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <div class="registration-container">
+        <h1>MyENERGY</h1>
+        <h2>Registration</h2>
+        <form>
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+            
+            <button type="submit" class="register-button">Register</button>
+        </form>
+    </div>
+
+    <script>
+        // Add event listener to the form submission
+        document.querySelector("form").addEventListener("submit", (e) => {
+            e.preventDefault(); // Prevent the default form submission
+
+            // Retrieve values from input fields
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            const email = document.getElementById("email").value;
+            const phone = document.getElementById("phone").value;
+
+            // Validate if the username already exists
+            if (localStorage.getItem(username)) {
+                alert("User already exists! Please use a different username.");
+            } else {
+                // Store user data in localStorage as a JSON string
+                const userData = { password, email, phone };
+                localStorage.setItem(username, JSON.stringify(userData));
+                alert("Registration successful!");
+            }
+        });
+
+    </script>
+
+</body>
+</html>

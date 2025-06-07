@@ -1,0 +1,104 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff0d8, #4CAF50); /* Green gradient */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333; /* Dark text for contrast */
+}
+
+/* Profile Container */
+.profile-container {
+    width: 400px;
+    background: #fff; /* White background */
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    padding: 30px;
+    text-align: center;
+}
+
+/* Header */
+header h1 {
+    font-size: 36px;
+    color: #4CAF50; /* Green title */
+    margin: 0;
+}
+
+header h2 {
+    font-size: 24px;
+    color: #666; /* Subtle gray for secondary heading */
+    margin: 10px 0 20px;
+}
+
+/* Profile Picture */
+.profile-picture-container {
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Circular picture */
+    border: 3px solid #4CAF50; /* Green border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Profile Details */
+.profile-details {
+    margin: 20px 0;
+    text-align: left;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 8px 0;
+}
+
+label {
+    font-size: 16px;
+    color: #4CAF50;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #dff0d8; /* Light green border */
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Action Buttons */
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.action-button {
+    background-color: #4CAF50; /* Green buttons */
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 25px; /* Rounded buttons */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.action-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale-up */
+}

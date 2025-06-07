@@ -1,0 +1,74 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #dff0d8, #4CAF50); /* Green gradient background */
+    color: #333;
+
+    /* Flexbox for centering */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+/* Login container styling */
+.login-container {
+    background-color: #fff; /* White container */
+    border: 1px solid #dff0d8; /* Light green border */
+    border-radius: 15px;
+    width: 350px;
+    padding: 25px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Modern shadow for depth */
+    text-align: center;
+}
+
+
+h1 {
+    font-size: 36px;
+    color: #4CAF50; /* Green title */
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 20px;
+    color: #666; /* Subtle text color */
+    margin-bottom: 20px;
+}
+
+/* Login options (User/Admin) */
+.login-options {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    gap: 15px; /* Space between options */
+}
+
+.login-option {
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+    border-radius: 10px;
+    padding: 15px;
+    width: 100px; /* Ensures uniform size */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-option:hover {
+    transform: scale(1.1); /* Slightly enlarges on hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+.login-option img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.login-option p {
+    font-size: 16px;
+    color: #4CAF50; /* Green text for consistency */
+    font-weight: bold;
+}

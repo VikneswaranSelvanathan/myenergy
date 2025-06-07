@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Analytics</title>
+    <link rel="stylesheet" href="analyticsstyles.css">
+</head>
+<body>
+    <div class="analytics-container">
+        <header>
+            <h1>MyENERGY - Admin Panel</h1>
+            <h2>Analytics</h2>
+        </header>
+
+        <main>
+            <!-- Analytics Section -->
+            <div class="analytics-stats">
+                <div class="stat-card">
+                    <h3>Total Registered Users</h3>
+                    <p class="stat-value" id="total-users">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Active Users Today</h3>
+                    <p class="stat-value" id="active-users">Loading...</p>
+                </div>
+                <div class="stat-card">
+                    <h3>Number of Downloads</h3>
+                    <p class="stat-value" id="downloads">Loading...</p>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="charts">
+                <canvas id="user-activity-chart"></canvas> <!-- Placeholder for activity chart -->
+            </div>
+        </main>
+    </div>
+
+    <script src="analytics.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</body>
+</html>

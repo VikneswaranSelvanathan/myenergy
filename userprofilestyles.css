@@ -1,0 +1,104 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #dff0d8, #4CAF50); /* Green gradient */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Profile Container */
+.profile-container {
+    background: #fff; /* White background for the profile card */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
+    width: 400px;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Header */
+header h1 {
+    font-size: 36px;
+    color: #4CAF50; /* Green for the main title */
+    margin: 0;
+}
+
+header h2 {
+    font-size: 22px;
+    color: #666; /* Subtle gray for secondary heading */
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+/* Profile Picture */
+.profile-picture-container {
+    position: relative;
+    margin: 20px auto;
+    width: 120px;
+    height: 120px;
+}
+
+.profile-pic {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #4CAF50; /* Green border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Depth for the profile picture */
+}
+
+/* Profile Details */
+.profile-details {
+    text-align: left;
+    margin: 20px 0;
+    padding: 10px;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 8px 0;
+    color: #333; /* Standard dark gray text */
+}
+
+/* Action Buttons */
+.profile-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between buttons */
+    margin-top: 20px;
+}
+
+.action-button {
+    background-color: #4CAF50; /* Green buttons */
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 25px; /* Rounded buttons */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    font-weight: bold;
+}
+
+.action-button:hover {
+    background-color: #45a049; /* Darker green on hover */
+    transform: scale(1.05); /* Slight scale-up */
+}
+
+/* Button Specific Styling */
+.edit-button {
+    background-color: #4CAF50;
+}
+
+.settings-button {
+    background-color: #ffcc00; /* Bright yellow for a distinct look */
+}
+
+.logout-button {
+    background-color: #e53935; /* Red for the logout button */
+}
